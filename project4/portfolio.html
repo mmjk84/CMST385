@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Travel Photos by Martin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Oswald:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<h1>Martin's Travel Clicks</h1>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a class="active" href="portfolio.html">Portfolio</a>
+  <a href="biography.html">Biography</a>
+  <a href="contact.html">Contact</a>
+</div>
+<hr class="solid">
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <h2>Portfolio</h2>
+      <p>These are some examples of my photography. Please feel free to look through.</p>
+      <br>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="imgs/photo_7.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="imgs/photo_6.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="imgs/photo_15.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="imgs/photo_16.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="imgs/photo_39.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="imgs/photo_41.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="imgs/photo_5.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="imgs/photo_22.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="imgs/photo_25.jpg" style="width:50%">
+        </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<hr class="solid">
+<div class="footer">
+  <h4>All photographs by: <a href="mailto:mkim98@student.umgc.edu?subject=Message">Martin Kim</a></h4>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
